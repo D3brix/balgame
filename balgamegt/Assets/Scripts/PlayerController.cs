@@ -2,14 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 
 
 public class PlayerController : MonoBehaviour
 {
     public float speed;
-    public Text scoreText;
-    public Text winText;
+    public TMP_Text scoreText;
+    public TMP_Text winText;
     public GameObject wall;
     public Rigidbody rb;
     public int score;
@@ -46,7 +47,7 @@ public class PlayerController : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("coin"))
+        if (other.gameObject.CompareTag("Coin"))
         {
             other.gameObject.SetActive(false);
             score++;
